@@ -2,11 +2,12 @@ name: first
 on: [pull_request, push]
 jobs:
   job1:
-    name: First job
+    name: Get Current Date
     runs-on: ubuntu-latest
     steps:
       - name: step one 1
-        uses: actions/checkout@v2
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: step two 2
         run: env|sort
   job2:
