@@ -13,7 +13,7 @@ jobs:
     name: Second job
     runs-on: windows-latest
     steps:
-      - name: step one 1
+      - name: step one 1 1
         uses: actions/checkout@v2
-      - name: step two 2
+      - name: step two 2 2
         run: "\Get-ChildItem Env:| Sort Object Name"
