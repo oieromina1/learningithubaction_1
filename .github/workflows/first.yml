@@ -19,7 +19,14 @@ jobs:
   job3:
     needs: [ job2, job1]
     name: Third job
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
+    steps:
+      - name: Third
+        uses: actions/checkout@v1
+  job4:
+    needs: [ job2, job1, job3 ]
+    name: Third job
+    runs-on: macos-latest
     steps:
       - name: Third
         uses: actions/checkout@v1
