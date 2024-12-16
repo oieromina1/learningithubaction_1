@@ -16,6 +16,9 @@ jobs:
       - name: step one 1 1
         uses: actions/checkout@v2
   job3:
-    name: Third job
     needs: [ job2, job1]
+    name: Third job
     runs-on: ubuntu-latest
+    steps:
+      - name: Third
+        uses: actions/checkout@v1
